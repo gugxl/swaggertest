@@ -21,6 +21,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+
     @PostMapping("/list")
     @ApiOperation("用户查询")
     public List<UserVO> getOtp(@RequestBody List<UserVO> userVOS) {
