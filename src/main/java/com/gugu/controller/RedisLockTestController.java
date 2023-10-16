@@ -1,6 +1,6 @@
 package com.gugu.controller;
 
-import com.gugu.vo.UserVO;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 
@@ -26,7 +27,7 @@ import java.util.concurrent.locks.Lock;
 public class RedisLockTestController {
     Logger logger = LoggerFactory.getLogger(RedisLockTestController.class);
 
-    @Autowired
+    @Autowired(required = false)
     RedisLockRegistry redisLockRegistry;
 
     @GetMapping("/test")
